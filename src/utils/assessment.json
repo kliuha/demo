@@ -1,0 +1,688 @@
+{
+  "Vital Signs": {
+    "name": "Vital Signs",
+    "questions": [
+      { "type": "number", "question": "Height", "answers": [], "variable": "vsHeight" },
+      { "type": "number", "question": "Weight", "answers": [], "variable": "vsWeight" },
+      { "type": "number", "question": "Systolic", "answers": [], "variable": "vsSystolic" },
+      { "type": "number", "question": "Diastolic", "answers": [], "variable": "vsDiastolic" }
+    ]
+  },
+  "Demographics and Depression Screening": {
+    "name": "Demographics and Depression Screening",
+    "questions": [
+      {
+        "type": "radio",
+        "question": "Over the last 2 weeks, how often have you been bothered by the following problems? Having little interest or pleasure in doing things",
+        "answers": ["Nearly every day", "More than half the days", "Several days", "Not at all"],
+        "variable": "ddsLInterest"
+      },
+      { "type": "radio", "question": "What is your gender?", "answers": ["Female", "Male"], "variable": "ddsGender" },
+      {
+        "type": "radio",
+        "question": "Over the last 2 weeks, how often have you been bothered by the following problems? Feeling tired or having little energy",
+        "answers": ["Nearly every day", "More than half the days", "Several days", "Not at all"],
+        "variable": "ddsFTired"
+      },
+      {
+        "type": "radio",
+        "question": "Over the last 2 weeks, how often have you been bothered by the following problems? Trouble falling asleep, staying asleep, or sleeping too much",
+        "answers": ["Nearly every day", "More than half the days", "Several days", "Not at all"],
+        "variable": "ddsFAsleep"
+      },
+      {
+        "type": "radio",
+        "question": "Over the last 2 weeks, how often have you been bothered by the following problems? Feeling down, depressed or hopeless",
+        "answers": ["Nearly every day", "More than half the days", "Several days", "Not at all"],
+        "variable": "ddsFDown"
+      },
+      {
+        "type": "radio",
+        "question": "What is your race?",
+        "answers": [
+          "White / Caucasian",
+          "Black or African American",
+          "Hispanic or Latino origin or descent",
+          "Asian",
+          "Native Hawaiian or other Pacific Islander",
+          "American Indian or Alaskan Native",
+          "Other"
+        ],
+        "variable": "ddsRace"
+      },
+      {
+        "type": "radio",
+        "question": "What is your marital status?",
+        "answers": ["Widowed", "Divorced", "Single", "Married or Domestic Partnership"],
+        "variable": "ddsMartial"
+      },
+      {
+        "type": "radio",
+        "question": "Who else lives in your home with you?",
+        "answers": [
+          "I live in a care facility",
+          "A paid care-giver",
+          "A non-relative (roommate)",
+          "A spouse and/or family",
+          "I live alone"
+        ],
+        "variable": "ddsHousemates"
+      }
+    ]
+  },
+  "Health Management History": {
+    "name": "Health Management History",
+    "questions": [
+      {
+        "type": "checkbox",
+        "question": "Have you been experiencing any of the following?",
+        "answers": [
+          "Feel dizzy or weak",
+          "Have trouble eating – lack of appetite",
+          "Feel very tired or fatigued",
+          "Feel confused or forgetful",
+          "None of these"
+        ],
+        "variable": "hmhExperience"
+      },
+      {
+        "type": "radio",
+        "question": "How would you rate your overall health?",
+        "answers": ["Excellent", "Good", "Average", "Poor", "Very Poor"],
+        "variable": "hmhHealthRate"
+      },
+      {
+        "type": "radio",
+        "question": "Do you feel confident you can manage most of your health problems?",
+        "answers": [
+          "Very confident",
+          "Somewhat confident",
+          "Not very confident",
+          "I cannot manage my health on my own"
+        ],
+        "variable": "hmhManageProblems"
+      },
+      {
+        "type": "checkbox",
+        "question": "Do you have any of these problems?",
+        "answers": [
+          "Transportation to/from appointments",
+          "Cost of care or medications",
+          "Understanding health information",
+          "Family issues or lack of help",
+          "None"
+        ],
+        "variable": "hmhAdditionalProblems"
+      },
+      {
+        "type": "radio",
+        "question": "In the past 6 months, have you been to an Emergency Room?",
+        "answers": ["No", "Yes"],
+        "variable": "hmhEmergencyRoom"
+      },
+      {
+        "type": "radio",
+        "question": "In the past 12 months, have you stayed overnight in a hospital?",
+        "answers": ["No", "Yes"],
+        "variable": "hmhHospital"
+      }
+    ]
+  },
+  "Family History": {
+    "name": "Family History",
+    "questions": [
+      {
+        "type": "checkbox",
+        "question": "Has anyone in your family ever had any of the following conditions?",
+        "answers": [
+          "Alcohol abuse",
+          "Allergies",
+          "Anemia",
+          "Arthritis",
+          "Asthma",
+          "Autoimmune Disorder",
+          "Bleeding disorder",
+          "Cancer, Breast",
+          "Cancer, Colon",
+          "Cancer, Melanoma",
+          "Cancer, Ovary",
+          "Cancer, any other",
+          "Colon Polyps",
+          "Depression",
+          "Diabetes",
+          "Glaucoma",
+          "Heart Attack / Heart Disease",
+          "High Blood Pressure",
+          "High Cholesterol",
+          "Immune Disorder",
+          "Kidney Disease",
+          "Liver Disease",
+          "Lung Disease/COPD",
+          "Mental Health Disorder",
+          "Osteoporosis",
+          "Stroke",
+          "Substance Abuse",
+          "Tuberculosis",
+          "Other",
+          "None"
+        ],
+        "variable": "fhFamilyProblems"
+      },
+      {
+        "type": "radio",
+        "question": "In the last 12 months, how many times have you seen a doctor?",
+        "answers": ["1 - 3 visits", "4 - 6 visits", "7 - 10 visits", "More than 10 visits", "None"],
+        "variable": "fhDoctorVisits"
+      },
+      {
+        "type": "checkbox",
+        "question": "In the last two years, what doctors or specialists have you seen?",
+        "answers": [
+          "Primary Care / General Practitioner",
+          "Cardiologist",
+          "Dentist",
+          "Dermatologist",
+          "Endocrinologist",
+          "Gynecologist",
+          "Immunologist",
+          "Internal Medicine Specialist",
+          "Neurologist",
+          "Oncologist",
+          "Orthopedic Surgeon",
+          "ENT Specialist (Ear, Nose, Throat)",
+          "Psychologist",
+          "Rheumatologist",
+          "Pulmonologist",
+          "Surgeon",
+          "Urologist",
+          "Other",
+          "None"
+        ],
+        "variable": "fhDoctorsTypes"
+      }
+    ]
+  },
+  "Diet Screening": {
+    "name": "Diet Screening",
+    "questions": [
+      {
+        "type": "radio",
+        "question": "Do you make your own meals?",
+        "answers": ["Yes", "I sometimes need help", "No, I always need help"],
+        "variable": "dsOwnMeals"
+      },
+      {
+        "type": "radio",
+        "question": "How many meals do you usually eat each day?",
+        "answers": ["4 or more", "3", "2", "1", "0"],
+        "variable": "dsMealsDay"
+      },
+      {
+        "type": "radio",
+        "question": "How many servings of vegetables OR fresh fruit do you eat each day?",
+        "answers": ["3 or more", "2", "1", "0"],
+        "variable": "dsFruitsDay"
+      },
+      {
+        "type": "radio",
+        "question": "How many servings of lean meats or fish do you eat each day?",
+        "answers": ["3 or more", "2", "1", "0"],
+        "variable": "dsMeatDay"
+      }
+    ]
+  },
+  "Tobacco, Alcohol, and Substance Use Screenings": {
+    "name": "Tobacco, Alcohol, and Substance Use Screenings",
+    "questions": [
+      {
+        "type": "radio",
+        "question": "Do you use tobacco or smoke cigarettes?",
+        "answers": [
+          "No",
+          "I smoke cigarettes",
+          "I smoke cigars or use a pipe",
+          "I use chewing tobacco",
+          "I used tobacco in the past, but I quit"
+        ],
+        "variable": "tasusTobacco"
+      },
+      {
+        "type": "radio",
+        "question": "How many cigarettes do you smoke per day?",
+        "answers": ["Less than 5", "More than 5, but less than a pack", "One pack per day", "More than 1 pack per day"],
+        "variable": "tasusSmokePerDay"
+      },
+      {
+        "type": "radio",
+        "question": "Do you use any of the following?",
+        "answers": [
+          "Sleeping pills or sedatives",
+          "Marijuana",
+          "Stimulants",
+          "Oxycodone, Oxycontin, or Vicodin",
+          "Cocaine, Heroin, or Ecstasy",
+          "None"
+        ],
+        "variable": "tasusUsingFollowing"
+      },
+      {
+        "type": "radio",
+        "question": "How often do you drink alcohol?",
+        "answers": [
+          "Never",
+          "Monthly or less",
+          "2-4 times a month",
+          "2-3 times a week",
+          "4 or more times a week",
+          "I quit drinking"
+        ],
+        "variable": "tasusAlcoholTime"
+      },
+      {
+        "type": "radio",
+        "question": "When drinking alcohol, how many drinks do you have?",
+        "answers": ["Less than 1, or none", "1 or 2", "3 or 4", "5 or 6", "7 or more"],
+        "variable": "tasusAlcoholCount"
+      }
+    ]
+  },
+  "Sexual Health Screening": {
+    "name": "Sexual Health Screening",
+    "questions": [
+      {
+        "type": "radio",
+        "question": "Have you been sexually active in the past year?",
+        "answers": ["Yes", "No", "Skip Question"],
+        "variable": "shsSexuallyActivities"
+      },
+      {
+        "type": "radio",
+        "question": "Have you been tested for Sexually Transmitted Diseases (STDs) and/or HIV?",
+        "answers": ["Yes, for STDs", "Yes, for HIV", "Yes, for both STDs and HIV", "No, or I don’t know"],
+        "variable": "shsSTD"
+      }
+    ]
+  },
+  "Reported Medications": {
+    "name": "Reported Medications",
+    "questions": [
+      {
+        "type": "checkbox",
+        "question": "Which of the following medications do you take?",
+        "answers": [
+          "Acid Reflux / Heartburn Medication",
+          "Allergy Medication",
+          "Anti-Anxiety Medication",
+          "Anti-seizure Medication",
+          "Antibiotics / Anti-Infective",
+          "Aspirin (daily)",
+          "Asthma Medication / Inhaler",
+          "Blood Pressure Medication",
+          "Blood Thinner",
+          "Cancer Medication (oral)",
+          "Cancer Treatment (radiation and/or chemotherapy)",
+          "Cholesterol Medication",
+          "COPD or Emphysema Medication / Inhaler",
+          "Depression Medication",
+          "Diabetes Medication (oral)",
+          "Diabetes Medication (Injections / Insulin)",
+          "Glaucoma Medication",
+          "Heart Failure Medication",
+          "Heart Rhythm Medication",
+          "Lung / Respiratory Medication / Inhaler",
+          "Osteoporosis Medication",
+          "Oxygen therapy",
+          "Pain Medication",
+          "Sleep Medication",
+          "Steroids / Prednisone",
+          "Tobacco Cessation Medication",
+          "Thyroid Medication",
+          "Water Pill / Diuretics",
+          "None of these",
+          "Other"
+        ],
+        "variable": "rmFollowingMedication"
+      },
+      {
+        "type": "checkbox",
+        "question": "Do you have any of these problems taking your medications as directed?",
+        "answers": [
+          "Swallowing Pills",
+          "Paying for prescriptions",
+          "Using my inhaler(s)",
+          "Giving myself injections",
+          "Remembering to take them",
+          "None of these"
+        ],
+        "variable": "rmMedicationsProblems"
+      }
+    ]
+  },
+  "Immunization History": {
+    "name": "Immunization History",
+    "questions": [
+      {
+        "type": "radio",
+        "question": "When was your last Flu shot?",
+        "answers": ["This year", "Last year", "A few years ago", "I don't remember", "Never"],
+        "variable": "ihFlu"
+      },
+      {
+        "type": "radio",
+        "question": "Have you had your Pneumonia vaccinations?",
+        "answers": [
+          "One or more Pneumonia shots after age 65",
+          "I've had more than one Pneumonia shot",
+          "I’ve had one Pneumonia shot",
+          "I don't remember",
+          "I’ve never had a Pneumonia shot"
+        ],
+        "variable": "ihPneumonia"
+      },
+      {
+        "type": "radio",
+        "question": "Have you had a Shingles vaccine?",
+        "answers": ["Yes, but only Zostavax", "No", "I don't know"],
+        "variable": "ihShingles"
+      }
+    ]
+  },
+  "Medical History": {
+    "name": "Medical History",
+    "questions": [
+      {
+        "type": "radio",
+        "question": "When was your last PSA screening for Prostate Cancer?",
+        "answers": [
+          "Does not apply, I am a Female",
+          "Within the last 12 months",
+          "Within the last 2 years",
+          "Within the last 5 years",
+          "More than 5 years ago",
+          "I have never had a PSA test"
+        ],
+        "variable": "mhPSA"
+      },
+      {
+        "type": "radio",
+        "question": "When was your last mammogram?",
+        "answers": [
+          "I’m Male, a mammogram has not been needed",
+          "Within the last 12 months",
+          "Within the last 2 years",
+          "More than 2 years ago",
+          "I have never had a mammogram"
+        ],
+        "variable": "mhMammogram"
+      },
+      {
+        "type": "radio",
+        "question": "Have you been tested for Osteoporosis (low bone density)?",
+        "answers": ["Yes", "No", "I don’t know"],
+        "variable": "mhOsteoporosis"
+      },
+      {
+        "type": "checkbox",
+        "question": "Have you had your Colon Cancer screenings?",
+        "answers": [
+          "I have a stool test at least every 2 years",
+          "I had a sigmoidoscopy within the last 4 years",
+          "I had a colonoscopy within the last 10 years",
+          "I’m not sure or I’m past due",
+          "I’ve never had a Colon Cancer screening"
+        ],
+        "variable": "mhColonCancer"
+      },
+      {
+        "type": "radio",
+        "question": "Have you ever been told your cholesterol level was high?",
+        "answers": ["Yes", "No", "I don’t remember"],
+        "variable": "mhCholesterol"
+      },
+      {
+        "type": "checkbox",
+        "question": "Have you ever been told you had any of the following conditions?",
+        "answers": [
+          "Heart Disease or Heart Attack",
+          "COPD or Emphysema",
+          "Depression",
+          "Stroke",
+          "Diabetes or high blood sugar",
+          "None"
+        ],
+        "variable": "mhFollowingCondition"
+      },
+      {
+        "type": "radio",
+        "question": "You checked Diabetic or high blood sugar. Are you:",
+        "answers": ["Diabetic taking insulin", "Diabetic NOT taking insulin", "Have high blood sugar, not Diabetes"],
+        "variable": "mhDiabetic"
+      },
+      {
+        "type": "radio",
+        "question": "Do you have bladder control accidents (leak urine)?",
+        "answers": ["Never", "Rarely", "Sometimes", "Often", "Every day"],
+        "variable": "mhLeakUrine"
+      }
+    ]
+  },
+  "Pain Screening": {
+    "name": "Pain Screening",
+    "questions": [
+      {
+        "type": "radio",
+        "question": "During the past four weeks, how much pain have you had?",
+        "answers": ["No pain", "Very mild pain", "Mild pain", "Moderate pain", "Severe pain"],
+        "variable": "psPainFrequency"
+      }
+    ]
+  },
+  "Cognitive Screening": {
+    "name": "Cognitive Screening",
+    "questions": [
+      {
+        "type": "checkbox",
+        "question": "For remembering later, select 3 words from the list.",
+        "answers": ["CHECKERS", "SAUCER", "TELEGRAM", "RED CROSS", "BROOCH", "THEATER", "RACING"],
+        "variable": "csWordsQuestion"
+      },
+      {
+        "type": "radio",
+        "question": "Checkers belongs in which category?",
+        "answers": ["Trees", "Buildings", "Games", "Shapes", "Animals"],
+        "variable": "csCheckers"
+      },
+      {
+        "type": "radio",
+        "question": "Which option is WORLD spelled backwards?",
+        "answers": ["WORLD", "DLRWO", "DLROW", "DRLOW", "LDRWO"],
+        "variable": "csWorld"
+      },
+      {
+        "type": "checkbox",
+        "question": "Find the 3 words you selected before and select them again.",
+        "answers": ["RED CROSS", "TELEGRAM", "CHECKERS", "RACING", "SAUCER", "THEATER", "BROOCH"],
+        "variable": "csWordsAnswer"
+      }
+    ]
+  },
+  "ADL/IADL Screening": {
+    "name": "ADL/IADL Screening",
+    "questions": [
+      {
+        "type": "radio",
+        "question": "How well are you able to manage your daily activities?",
+        "answers": ["Very well", "Somewhat well", "Not very well", "Not at all"],
+        "variable": "aisDailyActivities"
+      },
+      {
+        "type": "radio",
+        "question": "Can you get to places beyond walking distance without help?",
+        "answers": ["Yes", "Sometimes", "No"],
+        "variable": "aisWalkingDistance"
+      },
+      {
+        "type": "radio",
+        "question": "Can you go shopping for groceries or clothes without help?",
+        "answers": ["Yes", "Sometimes", "No"],
+        "variable": "aisShopping"
+      },
+      {
+        "type": "radio",
+        "question": "Can you do your housework without help?",
+        "answers": ["Yes", "Sometimes", "No"],
+        "variable": "aisHouswork"
+      },
+      {
+        "type": "radio",
+        "question": "Do you need help eating, dressing, bathing or getting around the house?",
+        "answers": ["Yes", "Sometimes", "No"],
+        "variable": "aisDressing"
+      },
+      {
+        "type": "radio",
+        "question": "Can you manage your money (banking and bills) without help?",
+        "answers": ["Yes", "No"],
+        "variable": "aisMoneyManage"
+      }
+    ]
+  },
+  "Fall Risk Screening": {
+    "name": "Fall Risk Screening",
+    "questions": [
+      {
+        "type": "checkbox",
+        "question": "Which of the following are NOT in your home?",
+        "answers": [
+          "Safety/grab bars in bathroom(s)",
+          "Smoke and/or carbon monoxide detectors",
+          "Anti-slip rugs and carpet",
+          "Sturdy railings and treads on stairs",
+          "Automatic night lights",
+          "None of these"
+        ],
+        "variable": "frsNotInHome"
+      },
+      {
+        "type": "radio",
+        "question": "Have you fallen in the past year?",
+        "answers": ["Yes", "No"],
+        "variable": "frsFallenYear"
+      },
+      {
+        "type": "radio",
+        "question": "How many times did you fall?",
+        "answers": ["1", "2", "3 or more"],
+        "variable": "frsFallenCount"
+      },
+      {
+        "type": "radio",
+        "question": "Do you ever feel shaky when standing or walking?",
+        "answers": ["Never", "Sometimes", "Often", "Always"],
+        "variable": "frsShaky"
+      }
+    ]
+  },
+  "Exercise and Activity Screening": {
+    "name": "Exercise and Activity Screening",
+    "questions": [
+      {
+        "type": "radio",
+        "question": "Do you exercise for 20 minutes three or more days a week?",
+        "answers": ["Always", "Most weeks", "Sometimes", "Never"],
+        "variable": "easExerciseWeek"
+      },
+      {
+        "type": "radio",
+        "question": "How often do you need to take a nap during the day?",
+        "answers": ["Never", "Once or twice a week", "Every other day", "Every day"],
+        "variable": "easNapDay"
+      }
+    ]
+  },
+  "Hearing Screening": {
+    "name": "Hearing Screening",
+    "questions": [
+      {
+        "type": "radio",
+        "question": "Do you have trouble hearing?",
+        "answers": ["Yes", "No", "Sometimes"],
+        "variable": "hsHearing"
+      }
+    ]
+  },
+  "Vision Screening": {
+    "name": "Vision Screening",
+    "questions": [
+      {
+        "type": "radio",
+        "question": "Do you have trouble seeing?",
+        "answers": ["Yes", "No", "Sometimes"],
+        "variable": "visSeeing"
+      },
+      {
+        "type": "radio",
+        "question": "When was your last eye exam?",
+        "answers": ["This year (within past 12 months)", "Last year (more than 12 months)", "More than 2 years ago"],
+        "variable": "visEyeExam"
+      }
+    ]
+  },
+  "Dental Screening": {
+    "name": "Dental Screening",
+    "questions": [
+      {
+        "type": "radio",
+        "question": "When was your last dental exam?",
+        "answers": ["This year (within past 12 months)", "Last year (more than 12 months)", "More than 2 years ago"],
+        "variable": "desDentalExam"
+      }
+    ]
+  },
+  "Social Support Screening": {
+    "name": "Social Support Screening",
+    "questions": [
+      {
+        "type": "radio",
+        "question": "In the last month, have your health or emotions stopped you from spending time with family or friends?",
+        "answers": ["Never", "A few times", "Sometimes", "Many times", "All of the time"],
+        "variable": "sssTimeWithFriends"
+      },
+      {
+        "type": "radio",
+        "question": "Do you have someone to help you when you need help?",
+        "answers": ["Always", "Most of the time", "Sometimes", "Never"],
+        "variable": "sssSomeoneHelp"
+      },
+      {
+        "type": "radio",
+        "question": "Do you get social and emotional help when you need support?",
+        "answers": ["Always", "Usually", "Sometimes", "Rarely", "Never"],
+        "variable": "sssSupport"
+      },
+      {
+        "type": "radio",
+        "question": "How often do you speak with family or friends?",
+        "answers": ["Every day", "A few times a week", "Every few weeks", "A few times a year", "Never"],
+        "variable": "sssSpeakWithFriends"
+      }
+    ]
+  },
+  "Advance Directives Screening": {
+    "name": "Advance Directives Screening",
+    "questions": [
+      {
+        "type": "radio",
+        "question": "Would you like to talk to your doctor about Advanced Directives?",
+        "answers": [
+          "Living Will",
+          "Health Care Power of Attorney (POA)",
+          "Do Not Resuscitate (DNR)",
+          "All of the above",
+          "None"
+        ],
+        "variable": "adsAdvancedDirectives"
+      }
+    ]
+  }
+}

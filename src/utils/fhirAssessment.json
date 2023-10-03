@@ -1,0 +1,3776 @@
+{
+  "status": "active",
+  "experimental": false,
+  "name": "Assessment",
+  "title": "Assessment",
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"],
+    "tag": [
+      {
+        "code": "lformsVersion: 29.2.1"
+      }
+    ]
+  },
+  "item": [
+    {
+      "type": "group",
+      "required": false,
+      "text": "Vital Signs",
+      "item": [
+        {
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueInteger": 999
+            }
+          ],
+          "required": false,
+          "linkId": "vsHeight",
+          "text": "Height"
+        },
+        {
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueInteger": 999
+            }
+          ],
+          "required": false,
+          "linkId": "vsWeight",
+          "text": "Weight"
+        },
+        {
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueInteger": 999
+            }
+          ],
+          "required": false,
+          "linkId": "vsSystolic",
+          "text": "Systolic"
+        },
+        {
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueInteger": 999
+            }
+          ],
+          "required": false,
+          "linkId": "vsDiastolic",
+          "text": "Diastolic"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "text": "Demographics and Depression Screening",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "ddsLInterest",
+          "text": "Over the last 2 weeks, how often have you been bothered by the following problems? Having little interest or pleasure in doing things",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Nearly every day"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "More than half the days"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Several days"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Not at all"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "ddsGender",
+          "text": "What is your gender?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Female"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Male"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "ddsFTired",
+          "text": "Over the last 2 weeks, how often have you been bothered by the following problems? Feeling tired or having little energy",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Nearly every day"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "More than half the days"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Several days"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Not at all"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "ddsFAsleep",
+          "text": "Over the last 2 weeks, how often have you been bothered by the following problems? Trouble falling asleep, staying asleep, or sleeping too much",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Nearly every day"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "More than half the days"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Several days"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Not at all"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "ddsFDown",
+          "text": "Over the last 2 weeks, how often have you been bothered by the following problems? Feeling down, depressed or hopeless",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Nearly every day"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "More than half the days"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Several days"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Not at all"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "ddsRace",
+          "text": "What is your race?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "White / Caucasian"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Black or African American"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Hispanic or Latino origin or descent"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Asian"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Native Hawaiian or other Pacific Islander"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "American Indian or Alaskan Native"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Other"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "ddsMartial",
+          "text": "What is your marital status?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Widowed"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Divorced"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Single"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Married or Domestic Partnership"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "ddsHousemates",
+          "text": "Who else lives in your home with you?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "I live in a care facility"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "A paid care-giver"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "A non-relative (roommate)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I live alone"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "text": "Health Management History",
+      "item": [
+        {
+          "type": "choice",
+          "code": [],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ],
+                "text": "Check-box"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "repeats": true,
+          "linkId": "hmhExperience",
+          "text": "Have you been experiencing any of the following?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Feel dizzy or weak"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Have trouble eating – lack of appetite"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Feel very tired or fatigued"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Feel confused or forgetful"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "None of these"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "hmhHealthRate",
+          "text": "How would you rate your overall health?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Excellent"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Good"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Average"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Poor"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Very Poor"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "hmhManageProblems",
+          "text": "Do you feel confident you can manage most of your health problems?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Very confident"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Somewhat confident"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Not very confident"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I cannot manage my health on my own"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "code": [],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ],
+                "text": "Check-box"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "repeats": true,
+          "linkId": "hmhAdditionalProblems",
+          "text": "Do you have any of these problems?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Transportation to/from appointments"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Cost of care or medications"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Understanding health information"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Family issues or lack of help"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "None"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "hmhEmergencyRoom",
+          "text": "In the past 6 months, have you been to an Emergency Room?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "hmhHospital",
+          "text": "In the past 12 months, have you stayed overnight in a hospital?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "text": "Family History",
+      "item": [
+        {
+          "type": "choice",
+          "code": [],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ],
+                "text": "Check-box"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "repeats": true,
+          "linkId": "fhFamilyProblems",
+          "text": "Has anyone in your family ever had any of the following conditions?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Alcohol abuse"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Allergies"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Anemia"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Arthritis"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Asthma"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Autoimmune Disorder"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Bleeding disorder"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Cancer, Breast"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Cancer, Colon"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Cancer, Melanoma"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Cancer, Ovary"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Cancer, any other"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Colon Polyps"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Depression"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Diabetes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Glaucoma"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Heart Attack / Heart Disease"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "High Blood Pressure"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "High Cholesterol"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Immune Disorder"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Kidney Disease"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Liver Disease"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Lung Disease/COPD"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Mental Health Disorder"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Osteoporosis"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Stroke"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Substance Abuse"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Tuberculosis"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Other"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "None"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "fhDoctorVisits",
+          "text": "In the last 12 months, how many times have you seen a doctor?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "1 - 3 visits"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "4 - 6 visits"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "7 - 10 visits"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "More than 10 visits"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "None"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "code": [],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ],
+                "text": "Check-box"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "repeats": true,
+          "linkId": "fhDoctorsTypes",
+          "text": "In the last two years, what doctors or specialists have you seen?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Primary Care / General Practitioner"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Cardiologist"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Dentist"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Dermatologist"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Endocrinologist"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Gynecologist"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Immunologist"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Internal Medicine Specialist"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Neurologist"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Oncologist"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Orthopedic Surgeon"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ENT Specialist (Ear, Nose, Throat)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Psychologist"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Rheumatologist"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Pulmonologist"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Surgeon"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Urologist"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Other"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "None"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "text": "Diet Screening",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "dsOwnMeals",
+          "text": "Do you make your own meals?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I sometimes need help"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No, I always need help"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "dsMealsDay",
+          "text": "How many meals do you usually eat each day?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "4 or more"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "3"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "2"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "1"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "0"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "dsFruitsDay",
+          "text": "How many servings of vegetables OR fresh fruit do you eat each day?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "3 or more"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "2"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "1"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "0"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "dsMeatDay",
+          "text": "How many servings of lean meats or fish do you eat each day?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "3 or more"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "2"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "1"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "0"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "text": "Tobacco, Alcohol, and Substance Use Screenings",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "tasusTobacco",
+          "text": "Do you use tobacco or smoke cigarettes?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "No"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I smoke cigarettes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I smoke cigars or use a pipe"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I use chewing tobacco"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I used tobacco in the past, but I quit"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "tasusSmokePerDay",
+          "text": "How many cigarettes do you smoke per day?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Less than 5"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "More than 5, but less than a pack"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "One pack per day"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "More than 1 pack per day"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "tasusUsingFollowing",
+          "text": "Do you use any of the following?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Sleeping pills or sedatives"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Marijuana"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Stimulants"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Oxycodone, Oxycontin, or Vicodin"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Cocaine, Heroin, or Ecstasy"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "None"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "tasusAlcoholTime",
+          "text": "How often do you drink alcohol?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Never"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Monthly or less"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "2-4 times a month"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "2-3 times a week"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "4 or more times a week"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I quit drinking"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "tasusAlcoholCount",
+          "text": "When drinking alcohol, how many drinks do you have?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Less than 1, or none"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "1 or 2"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "3 or 4"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "5 or 6"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "7 or more"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "text": "Sexual Health Screening",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "shsSexuallyActivities",
+          "text": "Have you been sexually active in the past year?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Skip Question"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "shsSTD",
+          "text": "Have you been tested for Sexually Transmitted Diseases (STDs) and/or HIV?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes, for STDs"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Yes, for HIV"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Yes, for both STDs and HIV"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No, or I don’t know"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "text": "Reported Medications",
+      "item": [
+        {
+          "type": "choice",
+          "code": [],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ],
+                "text": "Check-box"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "repeats": true,
+          "linkId": "rmFollowingMedication",
+          "text": "Which of the following medications do you take?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Acid Reflux / Heartburn Medication"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Allergy Medication"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Anti-Anxiety Medication"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Anti-seizure Medication"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Antibiotics / Anti-Infective"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Aspirin (daily)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Asthma Medication / Inhaler"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Blood Pressure Medication"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Blood Thinner"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Cancer Medication (oral)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Cancer Treatment (radiation and/or chemotherapy)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Cholesterol Medication"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "COPD or Emphysema Medication / Inhaler"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Depression Medication"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Diabetes Medication (oral)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Diabetes Medication (Injections / Insulin)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Glaucoma Medication"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Heart Failure Medication"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Heart Rhythm Medication"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Lung / Respiratory Medication / Inhaler"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Osteoporosis Medication"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Oxygen therapy"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Sleep Medication"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Steroids / Prednisone"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Tobacco Cessation Medication"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Thyroid Medication"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Water Pill / Diuretics"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "None of these"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Other"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "code": [],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ],
+                "text": "Check-box"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "repeats": true,
+          "linkId": "rmMedicationsProblems",
+          "text": "Do you have any of these problems taking your medications as directed?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Swallowing Pills"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Paying for prescriptions"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Using my inhaler(s)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Giving myself injections"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Remembering to take them"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "None of these"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "text": "Immunization History",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "ihFlu",
+          "text": "When was your last Flu shot?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "This year"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Last year"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "A few years ago"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I don't remember"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Never"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "ihPneumonia",
+          "text": "Have you had your Pneumonia vaccinations?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "One or more Pneumonia shots after age 65"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I've had more than one Pneumonia shot"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I’ve had one Pneumonia shot"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I don't remember"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I’ve never had a Pneumonia shot"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "ihShingles",
+          "text": "Have you had a Shingles vaccine?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes, but only Zostavax"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I don't know"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "text": "Medical History",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "mhPSA",
+          "text": "When was your last PSA screening for Prostate Cancer?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Does not apply, I am a Female"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Within the last 12 months"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Within the last 2 years"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Within the last 5 years"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "More than 5 years ago"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I have never had a PSA test"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "mhMammogram",
+          "text": "When was your last mammogram?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Within the last 12 months"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Within the last 2 years"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "More than 2 years ago"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I have never had a mammogram"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "mhOsteoporosis",
+          "text": "Have you been tested for Osteoporosis (low bone density)?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I don't know"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "code": [],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ],
+                "text": "Check-box"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "repeats": true,
+          "linkId": "mhColonCancer",
+          "text": "Have you had your Colon Cancer screenings?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "I have a stool test at least every 2 years"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I had a sigmoidoscopy within the last 4 years"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I had a colonoscopy within the last 10 years"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I’m not sure or I’m past due"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I’ve never had a Colon Cancer screening"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "mhCholesterol",
+          "text": "Have you ever been told your cholesterol level was high?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "I don't remember"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "code": [],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ],
+                "text": "Check-box"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "repeats": true,
+          "linkId": "mhFollowingCondition",
+          "text": "Have you ever been told you had any of the following conditions?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Heart Disease or Heart Attack"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "COPD or Emphysema"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Depression"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Stroke"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Diabetes or high blood sugar"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "None"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "mhDiabetic",
+          "text": "You checked Diabetic or high blood sugar. Are you:",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Diabetic taking insulin"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Diabetic NOT taking insulin"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Have high blood sugar, not Diabetes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "mhLeakUrine",
+          "text": "Do you have bladder control accidents (leak urine)?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Never"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Rarely"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Sometimes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Often"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Every day"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "text": "Pain Screening",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "psPainFrequency",
+          "text": "During the past four weeks, how much pain have you had?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "No pain"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Very mild pain"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Mild pain"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Moderate pain"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Severe pain"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "text": "Cognitive Screening",
+      "item": [
+        {
+          "type": "choice",
+          "code": [],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ],
+                "text": "Check-box"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "repeats": true,
+          "linkId": "csWordsQuestion",
+          "text": "For remembering later, select 3 words from the list.",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "CHECKERS"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "SAUCER"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "TELEGRAM"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "RED CROSS"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "BROOCH"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "THEATER"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "RACING"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "csCheckers",
+          "text": "Checkers belongs in which category?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Trees"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Buildings"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Games"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Shapes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Animals"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "csWorld",
+          "text": "Which option is WORLD spelled backwards?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "WORLD"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "DLRWO"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "DLROW"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "DRLOW"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "LDRWO"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "code": [],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ],
+                "text": "Check-box"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "repeats": true,
+          "linkId": "csWordsAnswer",
+          "text": "Find the 3 words you selected before and select them again.",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "RED CROSS"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "TELEGRAM"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "CHECKERS"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "RACING"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "SAUCER"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "THEATER"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "BROOCH"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "text": "ADL/IADL Screening",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "aisDailyActivities",
+          "text": "How well are you able to manage your daily activities?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Very well"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Somewhat well"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Not very well"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Not at all"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "aisWalkingDistance",
+          "text": "Can you get to places beyond walking distance without help?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Sometimes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "aisShopping",
+          "text": "Can you go shopping for groceries or clothes without help?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Sometimes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "aisHouswork",
+          "text": "Can you do your housework without help?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Sometimes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "aisDressing",
+          "text": "Do you need help eating, dressing, bathing or getting around the house?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Sometimes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "aisMoneyManage",
+          "text": "Can you manage your money (banking and bills) without help?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "text": "Fall Risk Screening",
+      "item": [
+        {
+          "type": "choice",
+          "code": [],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ],
+                "text": "Check-box"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "repeats": true,
+          "linkId": "frsNotInHome",
+          "text": "Which of the following are NOT in your home?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Safety/grab bars in bathroom(s)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Smoke and/or carbon monoxide detectors"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Anti-slip rugs and carpet"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Sturdy railings and treads on stairs"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Automatic night lights"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "None of these"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "frsFallenYear",
+          "text": "Have you fallen in the past year?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "frsFallenCount",
+          "text": "How many times did you fall?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "1"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "2"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "3 or more"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "frsShaky",
+          "text": "Do you ever feel shaky when standing or walking?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Never"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Sometimes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Often"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Always"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "text": "Exercise and Activity Screening",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "easExerciseWeek",
+          "text": "Do you exercise for 20 minutes three or more days a week?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Always"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Most weeks"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Sometimes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Never"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "easNapDay",
+          "text": "How often do you need to take a nap during the day?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Never"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Once or twice a week"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Every other day"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Every day"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "text": "Hearing Screening",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "hsHearing",
+          "text": "Do you have trouble hearing?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Sometimes"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "text": "Vision Screening",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "visSeeing",
+          "text": "Do you have trouble seeing?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Sometimes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "visEyeExam",
+          "text": "When was your last eye exam?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "This year (within past 12 months)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Last year (more than 12 months)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "More than 2 years ago"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "text": "Dental Screening",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "desDentalExam",
+          "text": "When was your last dental exam?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "This year (within past 12 months)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Last year (more than 12 months)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "More than 2 years ago"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "text": "Dental Screening",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "sssTimeWithFriends",
+          "text": "In the last month, have your health or emotions stopped you from spending time with family or friends?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Never"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "A few times"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Sometimes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Many times"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "All of the time"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "sssSomeoneHelp",
+          "text": "Do you have someone to help you when you need help?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Always"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Most of the time"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Sometimes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Never"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "sssSupport",
+          "text": "Do you get social and emotional help when you need support?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Always"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Usually"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Sometimes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Rarely"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Never"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "sssSpeakWithFriends",
+          "text": "How often do you speak with family or friends?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Every day"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "A few times a week"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Every few weeks"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "A few times a year"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Never"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "text": "Advance Directives Screening",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ],
+                "text": "Radio Button"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
+              "valueCode": "vertical"
+            }
+          ],
+          "required": false,
+          "linkId": "adsAdvancedDirectives",
+          "text": "Would you like to talk to your doctor about Advanced Directives?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Living Will"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Health Care Power of Attorney (POA)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Do Not Resuscitate (DNR)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "All of the above"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "None"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
